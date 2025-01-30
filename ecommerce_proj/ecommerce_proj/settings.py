@@ -147,6 +147,7 @@ MEDIA_ROOT = BASE_DIR/ 'media'
 AUTH_USER_MODEL = 'home.User'
 
 
+
 EMAIL_BACKEND = os.getenv('EMAIL_BACKEND')
 EMAIL_HOST = os.getenv('EMAIL_HOST')
 EMAIL_PORT = os.getenv('EMAIL_PORT')
