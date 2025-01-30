@@ -1,0 +1,24 @@
+{% extends 'home/index.html' %}
+
+{% block content %}
+<section class="section-content padding-y" style="min-height:84vh">
+    <div class="card mx-auto" style="max-width: 580px; margin-top:100px;">
+        <div class="card-body">
+            <h4 class="card-title mb-4">OTP Verification</h4>
+            <form action="{% url 'otp_verification' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter OTP" name="otp" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Verify OTP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p class="text-center mt-4">
+        Didn't receive the code? 
+        <a href="#">Resend OTP</a>
+    </p>
+</section>
+{% endblock %}
